@@ -7,7 +7,7 @@
         {
             "name": "Unity Editor",
             "type": "unity",
-            "path": "/D:/Projetos Unity/TicTacToe/Library/EditorInstance.json",
+            "path": "/d:/Projetos Unity/TicTacToeAi/Library/EditorInstance.json",
             "request": "launch"
         },
         {

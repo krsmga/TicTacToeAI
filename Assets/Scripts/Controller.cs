@@ -70,6 +70,7 @@ public class Controller : MonoBehaviour
         bool __isGameOver = false;
 
         int __tieCount = 0;
+        string __line = null;
         foreach (GameObject __object in squaresArray)
         {
             Square __parent = __object.GetComponent<Square>();
@@ -84,12 +85,14 @@ public class Controller : MonoBehaviour
         } 
         else
         {
+            
             foreach (KeyValuePair<WinPossibleScenarios, int> __boardSquare in boardHuman)
             {
                 if (boardHuman[__boardSquare.Key].Equals(3))
                 {
                     Debug.Log("Você ganhou");
                     __isGameOver = true;
+                    __line = __boardSquare.Key.ToString();
                 }
             }
             foreach (KeyValuePair<WinPossibleScenarios, int> __boardSquare in boardAI)
@@ -98,13 +101,15 @@ public class Controller : MonoBehaviour
                 {
                     Debug.Log("A AI Ganhou");
                     __isGameOver = true;
+                    __line = __boardSquare.Key.ToString();
                 }
             }
         }
 
         if (__isGameOver)
         {
-            RestartGame();
+       //     GameObject.Find(__line).SetActive(true);
+            //RestartGame();
         }
     }
 
